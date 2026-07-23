@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Phoenix - Login</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: #05070c;
+            color: #fff;
+            font-family: 'Cairo', Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-image: radial-gradient(circle, #1a233a 0%, #05070c 100%);
+        }
+        .login-card {
+            background: rgba(11, 15, 25, 0.85);
+            border: 2px solid #ff7700;
+            border-radius: 20px;
+            padding: 30px;
+            width: 420px;
+            text-align: center;
+            box-shadow: 0 0 40px rgba(255, 119, 0, 0.3);
+        }
+        .logo-title {
+            color: #ff9900;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        .btn {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .google { background: #db4437; }
+        .facebook { background: #3b5998; }
+        .phone { background: #10b981; }
+        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+        .footer-text {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-card">
+        <div class="logo-title">PROJECT PHOENIX</div>
+        <p style="color: #ccc; margin-bottom: 20px; font-size: 14px;">سجل دخولك وانطلق إلى أرض المعركة</p>
+
+        <button class="btn google" onclick="loginAction('Google')">
+            <span>تسجيل الدخول بواسطة Google</span>
+        </button>
+        
+        <button class="btn facebook" onclick="loginAction('Facebook')">
+            <span>تسجيل الدخول بواسطة Facebook</span>
+        </button>
+
+        <button class="btn phone" onclick="loginAction('Phone')">
+            <span>تسجيل برقم الهاتف</span>
+        </button>
+
+        <div class="footer-text">Survive. Fight. Rise.</div>
+    </div>
+
+    <script>
+        function loginAction(method) {
+            alert("جارٍ ربط الحساب عبر " + method + " والانتقال إلى ساحة المعركة لـ Project Phoenix...");
+        }
+    </script>
+</body>
+</html>
