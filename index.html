@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Phoenix - تسجيل الدخول</title>
+    <!-- استدعاء مكتبة الأيقونات العالمية FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
             --primary-orange: #FF8C00;
             --dark-bg: #1a1d24;
             --text-color: #e0e0e0;
-            --btn-hover: rgba(255, 255, 255, 0.1);
         }
 
         body {
@@ -22,7 +23,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            /* إضافة الخلفية الحربية */
+            /* الخلفية الحربية */
             background-image: url('https://files.catbox.moe/t7k69a.jpg');
             background-size: cover;
             background-position: center;
@@ -34,7 +35,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.6); /* تعتيم الخلفية */
+            background: rgba(0, 0, 0, 0.6);
         }
 
         .login-container {
@@ -86,22 +87,18 @@
             filter: brightness(1.1);
         }
 
+        /* الألوان الأساسية للأزرار */
         .btn-google { background-color: #db4437; }
         .btn-facebook { background-color: #3b5998; }
         .btn-phone { background-color: #f4b400; color: #333; }
-        .btn-discord { background-color: #7289da; }
-        .btn-whatsapp { background-color: #25D366; }
-        .btn-tiktok { background-color: #000000; border: 1px solid #333; }
-        .btn-apple { background-color: #000000; border: 1px solid #333;}
-        .btn-guest { background-color: #555; }
-
-        .icon {
-            width: 24px;
-            height: 24px;
-            margin-left: 10px;
-            object-fit: contain;
+        
+        /* تنسيق الأيقونات داخل الأزرار */
+        .btn i {
+            margin-left: 10px; /* مسافة بين الأيقونة والنص */
+            font-size: 20px;
         }
 
+        /* أزرار الخيارات الإضافية الصغيرة */
         .more-options-container {
             display: flex;
             flex-wrap: wrap;
@@ -118,11 +115,18 @@
             font-size: 12px;
         }
 
-        .btn-small .icon {
-            width: 18px;
-            height: 18px;
+        .btn-small i {
             margin-left: 5px;
+            font-size: 16px;
         }
+
+        /* ألوان الأزرار الصغيرة */
+        .btn-discord { background-color: #7289da; }
+        .btn-whatsapp { background-color: #25D366; }
+        .btn-tiktok { background-color: #000000; border: 1px solid #333; }
+        .btn-apple { background-color: #000000; border: 1px solid #333;}
+        .btn-guest { background-color: #555; }
+
     </style>
 </head>
 <body>
@@ -131,41 +135,36 @@
         <h1>PROJECT PHOENIX</h1>
         <p>سجل دخولك وانطلق إلى أرض المعركة</p>
 
-        <!-- الأزرار الرئيسية -->
+        <!-- الأزرار الرئيسية مع أيقونات FontAwesome -->
         <a href="#" class="btn btn-google">
-            <img src="https://files.catbox.moe/5j1g0y.png" alt="Google" class="icon">
+            <i class="fab fa-google"></i> <!-- أيقونة جوجل -->
             تسجيل الدخول بواسطة Google
         </a>
         <a href="#" class="btn btn-facebook">
-            <img src="https://files.catbox.moe/k4h62j.png" alt="Facebook" class="icon">
+            <i class="fab fa-facebook-f"></i> <!-- أيقونة فيسبوك -->
             تسجيل الدخول بواسطة Facebook
         </a>
         <a href="#" class="btn btn-phone">
-            <img src="https://files.catbox.moe/j9m1y8.png" alt="Phone" class="icon">
+            <i class="fas fa-envelope"></i> <!-- أيقونة البريد -->
             تسجيل برقم الهاتف/البريد
         </a>
 
         <!-- خيارات تسجيل الدخول الإضافية -->
         <div class="more-options-container">
             <a href="#" class="btn btn-small btn-discord">
-                <img src="https://files.catbox.moe/9z8c21.png" alt="Discord" class="icon">
-                Discord
+                <i class="fab fa-discord"></i> Discord
             </a>
              <a href="#" class="btn btn-small btn-guest">
-                <img src="https://files.catbox.moe/5b7y44.png" alt="Guest" class="icon">
-                ضيف
+                <i class="fas fa-user-secret"></i> ضيف
             </a>
             <a href="#" class="btn btn-small btn-whatsapp">
-                <img src="https://files.catbox.moe/7x8c11.png" alt="WhatsApp" class="icon">
-                WhatsApp
+                <i class="fab fa-whatsapp"></i> WhatsApp
             </a>
             <a href="#" class="btn btn-small btn-tiktok">
-                <img src="https://files.catbox.moe/p2a33d.png" alt="TikTok" class="icon">
-                TikTok
+                <i class="fab fa-tiktok"></i> TikTok
             </a>
             <a href="#" class="btn btn-small btn-apple">
-                <img src="https://files.catbox.moe/6q4s21.png" alt="Apple" class="icon">
-                Apple
+                <i class="fab fa-apple"></i> Apple
             </a>
         </div>
     </div>
