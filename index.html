@@ -3,16 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Phoenix</title>
+    <title>Project Phoenix - تسجيل الدخول</title>
     <style>
+        :root {
+            --primary-orange: #FF8C00;
+            --dark-bg: #1a1d24;
+            --text-color: #e0e0e0;
+            --btn-hover: rgba(255, 255, 255, 0.1);
+        }
+
         body {
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-color);
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            /* إضافة الخلفية الحربية */
             background-image: url('https://files.catbox.moe/t7k69a.jpg');
             background-size: cover;
             background-position: center;
@@ -24,33 +34,33 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.4);
+            background: rgba(0, 0, 0, 0.6); /* تعتيم الخلفية */
         }
 
         .login-container {
-            background: rgba(20, 25, 35, 0.85);
-            padding: 30px;
+            background: rgba(30, 35, 45, 0.9);
+            padding: 40px;
             border-radius: 15px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
             text-align: center;
             width: 90%;
-            max-width: 400px;
+            max-width: 450px;
             z-index: 10;
-            border: 1px solid rgba(255, 140, 0, 0.4);
+            border: 1px solid #333;
         }
 
         .login-container h1 {
-            color: #FF8C00;
-            margin-bottom: 5px;
-            font-size: 28px;
+            color: var(--primary-orange);
+            margin-bottom: 10px;
+            font-size: 36px;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
 
         .login-container p {
-            color: #b0b0b0;
-            margin-bottom: 25px;
-            font-size: 14px;
+            color: #a0a0a0;
+            margin-bottom: 30px;
+            font-size: 16px;
         }
 
         .btn {
@@ -58,11 +68,11 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            padding: 12px;
-            margin-bottom: 12px;
+            padding: 15px;
+            margin-bottom: 15px;
             border: none;
             border-radius: 8px;
-            font-size: 15px;
+            font-size: 16px;
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -79,28 +89,40 @@
         .btn-google { background-color: #db4437; }
         .btn-facebook { background-color: #3b5998; }
         .btn-phone { background-color: #f4b400; color: #333; }
+        .btn-discord { background-color: #7289da; }
+        .btn-whatsapp { background-color: #25D366; }
+        .btn-tiktok { background-color: #000000; border: 1px solid #333; }
+        .btn-apple { background-color: #000000; border: 1px solid #333;}
+        .btn-guest { background-color: #555; }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            margin-left: 10px;
+            object-fit: contain;
+        }
 
         .more-options-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 10px;
             justify-content: center;
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
         }
 
         .btn-small {
-            width: calc(33% - 8px);
-            padding: 8px;
-            font-size: 11px;
+            width: calc(25% - 10px); /* 4 أزرار في الصف */
+            padding: 10px;
+            font-size: 12px;
         }
 
-        .btn-discord { background-color: #7289da; }
-        .btn-whatsapp { background-color: #25D366; }
-        .btn-guest { background-color: #555; }
-        .btn-tiktok { background-color: #000; border: 1px solid #444; }
-        .btn-apple { background-color: #000; border: 1px solid #444; }
+        .btn-small .icon {
+            width: 18px;
+            height: 18px;
+            margin-left: 5px;
+        }
     </style>
 </head>
 <body>
@@ -109,16 +131,42 @@
         <h1>PROJECT PHOENIX</h1>
         <p>سجل دخولك وانطلق إلى أرض المعركة</p>
 
-        <a href="#" class="btn btn-google">تسجيل الدخول بواسطة Google</a>
-        <a href="#" class="btn btn-facebook">تسجيل الدخول بواسطة Facebook</a>
-        <a href="#" class="btn btn-phone">تسجيل برقم الهاتف/البريد</a>
+        <!-- الأزرار الرئيسية -->
+        <a href="#" class="btn btn-google">
+            <img src="https://files.catbox.moe/5j1g0y.png" alt="Google" class="icon">
+            تسجيل الدخول بواسطة Google
+        </a>
+        <a href="#" class="btn btn-facebook">
+            <img src="https://files.catbox.moe/k4h62j.png" alt="Facebook" class="icon">
+            تسجيل الدخول بواسطة Facebook
+        </a>
+        <a href="#" class="btn btn-phone">
+            <img src="https://files.catbox.moe/j9m1y8.png" alt="Phone" class="icon">
+            تسجيل برقم الهاتف/البريد
+        </a>
 
+        <!-- خيارات تسجيل الدخول الإضافية -->
         <div class="more-options-container">
-            <a href="#" class="btn btn-small btn-discord">Discord</a>
-            <a href="#" class="btn btn-small btn-guest">ضيف</a>
-            <a href="#" class="btn btn-small btn-whatsapp">WhatsApp</a>
-            <a href="#" class="btn btn-small btn-tiktok">TikTok</a>
-            <a href="#" class="btn btn-small btn-apple">Apple</a>
+            <a href="#" class="btn btn-small btn-discord">
+                <img src="https://files.catbox.moe/9z8c21.png" alt="Discord" class="icon">
+                Discord
+            </a>
+             <a href="#" class="btn btn-small btn-guest">
+                <img src="https://files.catbox.moe/5b7y44.png" alt="Guest" class="icon">
+                ضيف
+            </a>
+            <a href="#" class="btn btn-small btn-whatsapp">
+                <img src="https://files.catbox.moe/7x8c11.png" alt="WhatsApp" class="icon">
+                WhatsApp
+            </a>
+            <a href="#" class="btn btn-small btn-tiktok">
+                <img src="https://files.catbox.moe/p2a33d.png" alt="TikTok" class="icon">
+                TikTok
+            </a>
+            <a href="#" class="btn btn-small btn-apple">
+                <img src="https://files.catbox.moe/6q4s21.png" alt="Apple" class="icon">
+                Apple
+            </a>
         </div>
     </div>
 </body>
